@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { destination, vacation_price } from './vacation';
 import { useState } from 'react';
 import FruitScreen from '../components/fruit';
+import { useRouter } from "expo-router";
 
 export default function App() {
 
@@ -48,6 +49,8 @@ export default function App() {
 
   const [displayPerson, setDisplayPerson] = useState(person1);
 
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{`Welcome ${displayPerson.name}`}</Text>
@@ -61,6 +64,9 @@ export default function App() {
           alert("Person changed.");          
         }}>
           <Text>Click me</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("lab_3")}>
+          <Text>Lab 3</Text>
         </TouchableOpacity>
       </View>
       <FruitScreen />
