@@ -68,6 +68,9 @@ export default function App() {
         <TouchableOpacity onPress={() => router.push("lab_3")}>
           <Text>Lab 3</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("lab_4")}>
+          <Text>Lab 4</Text>
+        </TouchableOpacity>
       </View>
       <FruitScreen />
     </View>
